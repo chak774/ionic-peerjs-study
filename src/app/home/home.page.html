@@ -1,14 +1,30 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+  
+<ion-content padding>
+    <h2>Video Source List:</h2>
+    <div ion-item *ngFor="let videoSource of videoSources;">
+        <p>{{videoSource}}</p>
+    </div>
+    <h2>Audio Source List:</h2>
+    <div ion-item *ngFor="let audioSource of audioSources;">
+        <p>{{audioSource}}</p>
+    </div>
 
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+    <h2>My ID: {{myPeerId}}</h2>
+
+    <ion-item>
+        <ion-label position="fixed">ID: </ion-label>
+        <ion-input [(ngModel)]="peerId"></ion-input>
+    </ion-item>
+    <button ion-button block clear (click)="call()">Make Call</button> 
+
+    <ion-item>
+        <ion-label position="fixed">Message: </ion-label>
+        <ion-input [(ngModel)]="message"></ion-input>
+    </ion-item>
+    <button ion-button block clear (click)="sendMsg()">Send Message</button> 
+
+    <h2>Logs:</h2>
+    <div ion-item *ngFor="let log of logs;">
+        <p>{{log}}</p>
+    </div>
 </ion-content>

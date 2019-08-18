@@ -1,5 +1,7 @@
 {
   "name": "ionic-peerjs-study",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
